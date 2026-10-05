@@ -1,0 +1,129 @@
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: min(500px, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.file-box {
+    width: 100%;
+    min-height: 150px;
+    box-sizing: border-box;
+    border: 2px dashed #657181;
+    border-radius: 12px;
+    background-color: #181c22;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.file-box span {
+    display: grid;
+    gap: 8px;
+}
+
+.file-box strong {
+    font-size: 18px;
+}
+
+.file-box small {
+    color: #b8c0cc;
+    font-size: 14px;
+}
+
+.file-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+    border: 0;
+}
+
+.file-box:hover {
+    background-color: #27272a;
+    border-color: #00adb5;
+}
+
+.file-input:focus-visible + .file-box {
+    outline: 3px solid #00adb5;
+    outline-offset: 3px;
+}
+
+.send,
+.receive {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px;
+    background: #222831;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 20%);
+    text-align: center;
+}
+
+
+.intro {
+    text-align: left;
+}
+
+.intro h1 { margin-top: 0; }
+
+h1 {
+    color: #fff;
+}
+
+p {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 24px;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.receive h3 { margin-top: 0; }
+
+#codeInput {
+    width: 100%;
+    max-width: 280px;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #59616d;
+    border-radius: 8px;
+    background: #181c22;
+    color: #fff;
+    font: inherit;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#codeInput::placeholder {
+    color: #aab1bb;
+}
+
+#codeInput:focus {
+    border-color: black;
+    box-shadow: 0 0 0 3px rgb(0 173 181 / 20%);
+}
